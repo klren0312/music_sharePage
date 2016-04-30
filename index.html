@@ -14,6 +14,17 @@
 		.shou{
 			font-size: 20px;
 		}
+		.vcenter {
+			position:absolute;
+			left:30%;
+			top:40%;
+			translateX(-50%);
+			translateY(-50%);
+			color: white;
+			font-size: 30px;
+			font-weight: bold;
+
+		}
 
 
 	</style>
@@ -77,20 +88,49 @@
 	</div>
 	<!-- ---------------------- 插画 END ------------------ -->
 
-	<!--  -->
+	<!-- ------------ 歌词的介绍 ------------------------ -->
 	<div id="ge" class="col-md-12" style="background-color:#D1CECE;">
 		<img id="img1" src="img/Musica.jpg" class="col-md-6" style="width:50%;height:400px;">
-		<div id="font1" style="background-color:#A5C8C1;width:50%;height:400px;" class="col-md-6">
-			<h1 style="margin-top:20%;">由于歌词表达了歌曲的宗旨和灵魂，阐述了一首歌所要表达的感情和主旨，所以即使年代久远，有的歌词也不容易忘记。</h1>
+		<div id="font1" style="background-color:#3C3C40;width:50%;height:400px;" class="col-md-6">
+			<h1 style="color:white;margin-top:20%;">由于歌词表达了歌曲的宗旨和灵魂，阐述了一首歌所要表达的感情和主旨，所以即使年代久远，有的歌词也不容易忘记。</h1>
 		</div>	
 	</div>
+	<!-- ------------ 歌词的介绍 END ------------------------ -->
 	
+	
+	<!---------------- 写歌词的那些人-------------------- -->
+	<div id="ren" class="col-md-12" style="background-color:#D1CECE;">
+		 
+			
+		
+		<img id="img2" src="img/yuedui.png" class="col-md-12" style="width:100%;height:400px;">
+		   
+		<div id="font2">
+		     
+		     <div class="vcenter" ><center>无数音乐人用歌词来激起大家的共鸣</center><br>共同疯狂，共同快乐，共同悲伤，共同安静</div>
+		</div>
+	</div>
+	<!---------------- 写歌词的那些人 END-------------------- -->
+
+
+
 	<script type="text/javascript">
 		$(function(){
-			$('#ge').mouseover(function(){
+			// 图片和字交换位置的动画
+			$('#ge').mousemove(function(){
 				$('#img1').animate({left:"680px"});
 				$('#font1').animate({right:"660px"});
 			})
+			
+
+
+			//文字隐藏		
+			$('#font2').hide();
+			//图片透明度降低，文字显示
+			$('#ren').mouseover(function(){
+				$('#img2').animate({opacity:"0.5"});
+				$('#font2').show(2000);
+			});
 
 		})
 	</script>
