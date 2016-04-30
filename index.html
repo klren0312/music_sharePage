@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Your Lyrics</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<style type="text/css">
+		a:link {color: #fff}		/* 未访问的链接 */
+		a:visited {color: #fff}	/* 已访问的链接 */
+		a:hover {color: #000}	/* 鼠标移动到链接上 */
+		a:active {color: #fff}	/* 选定的链接 */
+		.shou{
+			font-size: 20px;
+		}
+
+
+	</style>
+</head>
+<body >
+
+	<!-- -------------------- 导航条 ---------------------------- -->
+	<header >
+		<nav class="navbar navbar-fixed-top transparent">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+				
+	          </button>
+	          <a class="navbar-brand desktop" href="index.html">
+            	<img src="img/icon.png" alert="icon" width="40px" height="40px">
+         	  </a>
+	        </div>
+	        <div id="navbar" class="navbar-collapse collapse">
+	          
+	          <div >
+	          	<ul  class="nav navbar-nav navbar-right pull-left">
+	          		<li ><a class="shou" href="index.html">首页</a></li>
+					<li ><a class="shou" href="https://90seconds.tv/about/">歌词分享</a></li>
+					<li ><a class="shou" href="https://90seconds.tv/videos/">音乐欣赏</a></li>
+					<li ><a class="shou" href="http://ridethewave.video/">关于我们</a></li>
+				</ul>
+
+			</div>                    
+			<div >
+	            <ul class="nav navbar-nav navbar-right pull-right">
+	              <li><a class="shou" href="https://vaas.90seconds.tv/freelancers/signup" class="sign-up-link">注册</a></li>
+	              <li><a class="shou" href="https://vaas.90seconds.tv/human/sign_in">登录</a></li>
+	              </li>
+	            </ul>
+	          </div>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
+	</header>
+	<!-- -------------------- 导航条 END ---------------------------- -->
+
+
+	<!-- -------------- 幕头图片 ---------------------------- -->
+	<section id="welcome" class="jumbotron">
+		<div class="container " >
+			<br><br>
+			<h1><strong>歌词 </strong>一首歌的灵魂</h1>
+			<p>让我们共同分享，那些让你 <em>感触很深</em> 的歌词
+		</div>
+	</section>
+	<!-- -------------- 幕头图片 END ---------------------------- -->
+	
+	<!-- ---------------------- 插画 ------------------ -->
+	<div id="one">
+		<img src="img/music2.jpg" style="margin-top:-30px;width:100%;height:200px;">
+	</div>
+	<!-- ---------------------- 插画 END ------------------ -->
+
+	<!--  -->
+	<div id="ge" class="col-md-12" style="background-color:#D1CECE;">
+		<img id="img1" src="img/Musica.jpg" class="col-md-6" style="width:50%;height:400px;">
+		<div id="font1" style="background-color:#A5C8C1;width:50%;height:400px;" class="col-md-6">
+			<h1 style="margin-top:20%;">由于歌词表达了歌曲的宗旨和灵魂，阐述了一首歌所要表达的感情和主旨，所以即使年代久远，有的歌词也不容易忘记。</h1>
+		</div>	
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			$('#ge').mouseover(function(){
+				$('#img1').animate({left:"680px"});
+				$('#font1').animate({right:"660px"});
+			})
+
+		})
+	</script>
+</body>
+</html>
