@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Your Lyrics</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
 	<style type="text/css">
 		a:link {color: #fff}		/* 未访问的链接 */
 		a:visited {color: #fff}	/* 已访问的链接 */
@@ -15,26 +15,18 @@
 		.shou{
 			font-size: 20px;
 		}
-		.vcenter {
-			position:absolute;
-			left:30%;
-			top:40%;
-			translateX(-50%);
-			translateY(-50%);
-			color: white;
-			font-size: 30px;
-			font-weight: bold;
+		
 
-		}
-
+	
 
 	</style>
+
 </head>
 <body >
 
 	<!-- -------------------- 导航条 ---------------------------- -->
 	<header >
-		<nav class="navbar navbar-fixed-top transparent">
+		<nav class="navbar navbar-fixed-top " style="background:black;">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -45,7 +37,7 @@
 				
 	          </button>
 	          <a class="navbar-brand desktop" href="index.html">
-            	<img src="img/icon.png" alert="icon" width="40px" height="40px">
+            	<img src="img/icon.png" alert="icon" width="30px" height="30px">
          	  </a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
@@ -72,47 +64,11 @@
 	</header>
 	<!-- -------------------- 导航条 END ---------------------------- -->
 
+	<br><br><br><br><br><br>
+	
+	<br><br><br><br><br><br>
 
-	<!-- -------------- 幕头图片 ---------------------------- -->
-	<section id="welcome" class="jumbotron">
-		<div class="container " >
-			<br><br>
-			<h1><strong>歌词 </strong>一首歌的灵魂</h1>
-			<p>让我们共同分享，那些让你 <em>感触很深</em> 的歌词
-		</div>
-	</section>
-	<!-- -------------- 幕头图片 END ---------------------------- -->
-	
-	<!-- ---------------------- 插画 ------------------ -->
-	<div id="one">
-		<img src="img/music2.jpg" style="margin-top:-30px;width:100%;height:200px;">
-	</div>
-	<!-- ---------------------- 插画 END ------------------ -->
-
-	<!-- ------------ 歌词的介绍 ------------------------ -->
-	<div id="ge" class="col-md-12" style="background-color:#D1CECE;">
-		<img id="img1" src="img/Musica.jpg" class="col-md-6" style="width:50%;height:400px;">
-		<div id="font1" style="background-color:#3C3C40;width:50%;height:400px;" class="col-md-6">
-			<h1 style="color:white;margin-top:20%;">由于歌词表达了歌曲的宗旨和灵魂，阐述了一首歌所要表达的感情和主旨，所以即使年代久远，有的歌词也不容易忘记。</h1>
-		</div>	
-	</div>
-	<!-- ------------ 歌词的介绍 END ------------------------ -->
-	
-	
-	<!---------------- 写歌词的那些人-------------------- -->
-	<div id="ren" class="col-md-12" style="background-color:#D1CECE;">
-		 
-			
-		
-		<img id="img2" src="img/yuedui.png" class="col-md-12" style="width:100%;height:400px;">
-		   
-		<div id="font2">
-		     
-		     <div class="vcenter" ><center>无数音乐人用歌词来激起大家的共鸣</center><br>共同疯狂，共同快乐，共同悲伤，共同安静</div>
-		</div>
-	</div>
-	<!---------------- 写歌词的那些人 END-------------------- -->
-	
+	<!-- ------------------------页尾 ---------------------------- -->
 	<div class="col-md-12" >
 		<hr style="background-color:#161515;height:10px;">
 		<center>
@@ -126,31 +82,9 @@
 			
 		</center>
 	</div>
+	<!-- ------------------------页尾 END ---------------------------- -->
+	
 
 	
-	<script src="js/translater.min.js"></script>
-
-	<script type="text/javascript">
-		
-
-		$(function(){
-			// 图片和字交换位置的动画
-			$('#ge').mousemove(function(){
-				$('#img1').animate({left:"680px"});
-				$('#font1').animate({right:"660px"});
-			})
-			
-
-
-			//文字隐藏		
-			$('#font2').hide();
-			//图片透明度降低，文字显示
-			$('#ren').mouseover(function(){
-				$('#img2').animate({opacity:"0.5"});
-				$('#font2').show(2000);
-			});
-
-		})
-	</script>
 </body>
 </html>
