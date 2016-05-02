@@ -1,14 +1,14 @@
 ; (function () {
 
-    var radius = 120;
+    var radius = 360;//旋转半径
     var dtr = Math.PI / 180;
-    var d = 300;
+    var d = 300;//字体粗细
     var mcList = [];
     var active = false;
     var lasta = 1;
     var lastb = 1;
     var distr = true;
-    var tspeed = 10;
+    var tspeed = 5;//速度，越小越慢
     var size = 250;
 
     var mouseX = 0;
