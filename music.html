@@ -15,6 +15,12 @@
 			font-size: 20px;
 		}
 		
+		.musicbtn{
+			width:100%;
+			height:30px;
+			background-color:#5522CB;
+			color:white;
+		}
 
 	
 
@@ -52,8 +58,8 @@
 			</div>                    
 			<div >
 	            <ul class="nav navbar-nav navbar-right pull-right">
-	              <li><a class="shou" href="http://zzesxiao.leanote.com" class="sign-up-link">注册</a></li>
-	              <li><a class="shou" href="http://zzesxiao.leanote.com">登录</a></li>
+	            	<li><a class="shou" href="#" data-toggle="modal" data-target="#zc">注册</a></li>
+	            	<li><a  data-toggle="modal" data-target="#login" class="shou" href="#">登录</a></li>
 	              </li>
 	            </ul>
 	          </div>
@@ -61,13 +67,77 @@
 	      </div>
 	    </nav>
 	</header>
+
+	<!-- 登录弹出框 -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form action="" >
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">用户名：<input name="username" type="text"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;密码：<input type="password" name="password"></h4>
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" class="btn btn-primary">登录</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 注册弹出框 -->
+	<div class="modal fade" id="zc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form action="" >
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input name="username" type="text"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="password"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">再次输入密码：<input type="password" name="password"></h4>
+
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" class="btn btn-primary">注册</button>
+		        <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+		      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div>
 	<!-- -------------------- 导航条 END ---------------------------- -->
 
-	<br><br><br><br><br><br>
-	<!-- ... -->
-	<div id="player1" class="aplayer"></div>
-	<!-- ... -->
-	<br><br><br><br><br><br>
+	<br>
+	<br>
+	<br>
+	<!--  -------------------------- 标题 ---------------------------- -->
+	<button  class="btn col-md-12" style="background-color:#1F1E1E;color:white;font-size:35px;" >歌曲欣赏</button>
+
+		<br>
+		<br>
+		<br>
+	<!-- one -->
+	<button  class="musicbtn" id="musicName">慌慌张张， 匆匆忙忙，
+为何生活总是这样，
+难道说我的理想，
+就是这样度过一生的时光
+--活着</button>
+	<div id="player1" class="aplayer" style="display:none;"></div>
+
+	<!-- two -->
+	<button  class="musicbtn" id="musicName2">纯音乐</button>
+	<div id="player2" class="aplayer" style="display:none;"></div>
+
+
+	
+
+
+
 
 	<!-- ------------------------页尾 ---------------------------- -->
 	<div class="col-md-12" >
@@ -100,13 +170,47 @@
 	    mutex: true,
 	    theme: '#e6d0b2',
 	    music: {
+	        title: '活着',
+	        author: 'haoyun',
+	        url: 'http://sc.111ttt.com/up/mp3/208838/B77F7E6B871F0D5CB2ED378E90E99A7B.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap1.init();
+
+	var ap2 = new APlayer({
+	    element: document.getElementById('player2'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
 	        title: 'Preparation',
 	        author: 'Hans Zimmer/Richard Harvey',
 	        url: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.mp3',
 	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
 	    }
 	});
-	ap1.init();
+	ap2.init();
+
+
+
+
+	//点击歌名弹出或隐藏播放
+	$(function(){
+		$("#musicName").click(function(){	
+			$("#player1").toggle(600);
+		});
+	});
+
+	$(function(){
+		$("#musicName2").click(function(){	
+			$("#player2").toggle(600);
+		});
+	});
+
+
 	</script>
 	
 </body>
