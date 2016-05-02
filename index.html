@@ -61,15 +61,58 @@
 			</div>                    
 			<div >
 	            <ul class="nav navbar-nav navbar-right pull-right">
-	              <li><a class="shou" href="http://zzesxiao.leanote.com" class="sign-up-link">注册</a></li>
-	              <li><a class="shou" href="http://zzesxiao.leanote.com">登录</a></li>
-	              </li>
+	              <li><a class="shou" href="#" data-toggle="modal" data-target="#zc">注册</a></li>
+	              <li><a  data-toggle="modal" data-target="#login" class="shou" href="#">登录</a></li>
+	             
 	            </ul>
 	          </div>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>
 	</header>
+
+	<!-- 登录弹出框 -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form action="" >
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">用户名：<input name="username" type="text"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;密码：<input type="password" name="password"></h4>
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" class="btn btn-primary">登录</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 注册弹出框 -->
+	<div class="modal fade" id="zc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    <form action="" >
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名：<input name="username" type="text"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="password"></h4>
+		        <br>    
+		        <h4 class="modal-title" id="myModalLabel">再次输入密码：<input type="password" name="password"></h4>
+
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" class="btn btn-primary">注册</button>
+		        <button type="button" class="btn btn-default"  data-target="#login">登录</button>
+		      </div>
+	    </form>
+	    </div>
+	  </div>
+	</div>
 	<!-- -------------------- 导航条 END ---------------------------- -->
 
 
