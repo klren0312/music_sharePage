@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Your Lyrics</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/APlayer.min.css">
 
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<style type="text/css">
 		a:link {color: #fff}		/* 未访问的链接 */
 		a:visited {color: #fff}	/* 已访问的链接 */
@@ -65,7 +64,9 @@
 	<!-- -------------------- 导航条 END ---------------------------- -->
 
 	<br><br><br><br><br><br>
-	
+	<!-- ... -->
+	<div id="player1" class="aplayer"></div>
+	<!-- ... -->
 	<br><br><br><br><br><br>
 
 	<!-- ------------------------页尾 ---------------------------- -->
@@ -84,7 +85,29 @@
 	</div>
 	<!-- ------------------------页尾 END ---------------------------- -->
 	
+	<!-------------- 引入js文件---------- -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/APlayer.min.js"></script>
+	
+	<script type="text/javascript">
 
+	var ap1 = new APlayer({
+	    element: document.getElementById('player1'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: 'Preparation',
+	        author: 'Hans Zimmer/Richard Harvey',
+	        url: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap1.init();
+	</script>
 	
 </body>
 </html>

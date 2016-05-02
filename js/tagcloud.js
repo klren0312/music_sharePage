@@ -8,7 +8,7 @@
     var lasta = 1;
     var lastb = 1;
     var distr = true;
-    var tspeed = 5;//速度，越小越慢
+    var tspeed = 3;//速度，越小越慢
     var size = 250;
 
     var mouseX = 0;
