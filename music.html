@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Your Lyrics</title>
+	<link rel="icon" href="img/music.jpg" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/APlayer.min.css">
 
@@ -18,8 +19,9 @@
 		.musicbtn{
 			width:100%;
 			height:30px;
-			background-color:#5522CB;
+			background-color:#d72323;
 			color:white;
+			opacity:0.8;filter:alpha(opacity=80)
 		}
 
 	
@@ -51,7 +53,7 @@
 	          	<ul  class="nav navbar-nav navbar-right pull-left">
 	          		<li ><a class="shou" href="index.html">首页</a></li>
 					<li ><a class="shou" href="share.html">歌词分享</a></li>
-					<li ><a class="shou" href="http://zzesxiao.leanote.com">音乐欣赏</a></li>
+					<li ><a class="shou" href="music.html">音乐欣赏</a></li>
 					<li ><a class="shou" href="http://zzesxiao.leanote.com">关于我们</a></li>
 				</ul>
 
@@ -122,16 +124,59 @@
 		<br>
 		<br>
 	<!-- one -->
-	<button  class="musicbtn" id="musicName">慌慌张张， 匆匆忙忙，
+	<button  class="musicbtn" id="musicName" style="background-color:#3e3636;">慌慌张张， 匆匆忙忙，
 为何生活总是这样，
 难道说我的理想，
 就是这样度过一生的时光
---活着</button>
+--《活着》</button>
 	<div id="player1" class="aplayer" style="display:none;"></div>
 
 	<!-- two -->
-	<button  class="musicbtn" id="musicName2">纯音乐</button>
+	<button  class="musicbtn" id="musicName2" style="background-color:#f66095;">不再去说从前，只是寒暄。
+对你说一句，只是说一句，
+好久不见。--《好久不见》</button>
 	<div id="player2" class="aplayer" style="display:none;"></div>
+
+	<!-- three -->
+	<button  class="musicbtn" id="musicName3" style="background-color:#38817a;">去和昨天和解吧，就像我们从前那样。——《揪心的玩笑和漫长的白日梦》</button>
+	<div id="player3" class="aplayer" style="display:none;"></div>
+
+	<!-- four -->
+	<button  class="musicbtn" id="musicName4" style="background-color:#2bcdc1;">被推着走，跟着生活流，来年陌生的是昨日最亲的某某。——《最佳损友》</button>
+	<div id="player4" class="aplayer" style="display:none;"></div>
+
+	<!-- five -->
+	<button  class="musicbtn" id="musicName5" style="background-color:#3e3636;">各自奔前程的身影匆匆渐行渐远，未来在哪里平凡阿，谁给我答案。——《老男孩》</button>
+	<div id="player5" class="aplayer" style="display:none;"></div>
+
+	<!-- six -->
+	<button  class="musicbtn" id="musicName6" style="background-color:#f66095;">我要
+
+这铁棒有何用
+
+我有
+
+这变化又如何
+
+还是不安
+
+还是氐惆
+
+金箍当头
+
+欲说还休 ——《悟空》</button>
+	<div id="player6" class="aplayer" style="display:none;"></div>
+
+	<!-- seven -->
+	<button  class="musicbtn" id="musicName7" style="background-color:#38817a;">这一刹 我只需要一罐热茶吧 那味道似是什么都不紧要 ——《再见二丁目》 </button>
+	<div id="player7" class="aplayer" style="display:none;"></div>
+
+
+
+
+	<!-- ------------------------ 图标  ---------------------- -->
+	<div class="btn" style="width:100%;"><img  id="tutu" src="img/31.jpg" ></div>
+	
 
 
 	
@@ -162,6 +207,7 @@
 	
 	<script type="text/javascript">
 
+	//============ ONE====================
 	var ap1 = new APlayer({
 	    element: document.getElementById('player1'),
 	    narrow: false,
@@ -171,13 +217,14 @@
 	    theme: '#e6d0b2',
 	    music: {
 	        title: '活着',
-	        author: 'haoyun',
+	        author: '郝云',
 	        url: 'http://sc.111ttt.com/up/mp3/208838/B77F7E6B871F0D5CB2ED378E90E99A7B.mp3',
 	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
 	    }
 	});
 	ap1.init();
 
+	//============ TWO====================
 	var ap2 = new APlayer({
 	    element: document.getElementById('player2'),
 	    narrow: false,
@@ -186,9 +233,95 @@
 	    mutex: true,
 	    theme: '#e6d0b2',
 	    music: {
-	        title: 'Preparation',
-	        author: 'Hans Zimmer/Richard Harvey',
-	        url: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.mp3',
+	        title: '好久不见',
+	        author: '陈奕迅',
+	        url: 'http://sc.111ttt.com/up/mp3/146751/A10A4D954DE02CE609CDB436FDC4FD8B.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap2.init();
+
+
+	//============ THREE====================
+	var ap2 = new APlayer({
+	    element: document.getElementById('player3'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: '揪心的玩笑与漫长的白日梦', 
+	        author: '万能青年旅店',
+	        url: 'http://sc.111ttt.com/up/mp3/92427/322F640E91EFAF7368CCF80A18F9D6D2.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap2.init();
+
+	//============ FOUR====================
+	var ap2 = new APlayer({
+	    element: document.getElementById('player4'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: '最佳损友', 
+	        author: '陈奕迅',
+	        url: 'http://sc.111ttt.com/up/mp3/241047/289DAFA4CEA2B76CBCC2F3670CC24FB3.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap2.init();
+
+	//============ FIVE====================
+	var ap2 = new APlayer({
+	    element: document.getElementById('player5'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: '老男孩', 
+	        author: '筷子兄弟',
+	        url: 'http://sc.111ttt.com/up/mp3/94431/04432C5A6074F5030355D43F9FDA63D8.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap2.init();
+
+	//============ SIX====================
+	var ap2 = new APlayer({
+	    element: document.getElementById('player6'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: '悟空', 
+	        author: '戴荃',
+	        url: 'http://sc1.111ttt.com/2015/1/02/01/95010303506.mp3',
+	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
+	    }
+	});
+	ap2.init();
+
+	//============ SEVEN====================
+	var ap2 = new APlayer({
+	    element: document.getElementById('player7'),
+	    narrow: false,
+	    autoplay: false,
+	    showlrc: false,
+	    mutex: true,
+	    theme: '#e6d0b2',
+	    music: {
+	        title: '再见二丁目', 
+	        author: '杨千嬅',
+	        url: 'http://sc.111ttt.com/up/mp3/172220/1FB7562E046931ECCD81D04234F2B038.mp3',
 	        pic: 'http://7xq131.com1.z0.glb.clouddn.com/Preparation.jpg'
 	    }
 	});
@@ -196,21 +329,64 @@
 
 
 
-
 	//点击歌名弹出或隐藏播放
+	//================ONE=================
 	$(function(){
 		$("#musicName").click(function(){	
 			$("#player1").toggle(600);
 		});
 	});
 
+
+	//================TWO=================
 	$(function(){
 		$("#musicName2").click(function(){	
 			$("#player2").toggle(600);
 		});
 	});
 
+	//================THREE=================
+	$(function(){
+		$("#musicName3").click(function(){	
+			$("#player3").toggle(600);
+		});
+	});
 
+	//================FOUR=================
+	$(function(){
+		$("#musicName4").click(function(){	
+			$("#player4").toggle(600);
+		});
+	});
+
+	//================FIVE=================
+	$(function(){
+		$("#musicName5").click(function(){	
+			$("#player5").toggle(600);
+		});
+	});
+
+	//================SIX=================
+	$(function(){
+		$("#musicName6").click(function(){	
+			$("#player6").toggle(600);
+		});
+	});
+
+	//================SEVEN=================
+	$(function(){
+		$("#musicName7").click(function(){	
+			$("#player7").toggle(600);
+		});
+	});
+
+	//=============点击图片 歌曲消失=====================
+	$(function(){
+		$("#tutu").click(function(){
+			$(".musicbtn").toggle(5000);
+
+		})
+	})
 	</script>
 	
 </body>
