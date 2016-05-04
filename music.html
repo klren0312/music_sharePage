@@ -172,7 +172,9 @@
 	<div id="player7" class="aplayer" style="display:none;"></div>
 
 
-
+	<!-- 多说评论框 start --> 
+	<div class="ds-thread" data-thread-key="music" data-title="音乐分享" data-url="music.html"></div>
+	<!-- 多说评论框 end -->
 
 	<!-- ------------------------ 图标  ---------------------- -->
 	<div class="btn" style="width:100%;"><img  id="tutu" src="img/31.jpg" ></div>
@@ -387,7 +389,20 @@
 
 		})
 	})
+
+
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	var duoshuoQuery = {short_name:"zzes"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] 
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+	<!-- 多说公共JS代码 end -->
 	</script>
-	
+
 </body>
 </html>
